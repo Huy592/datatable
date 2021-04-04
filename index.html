@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="data-table">
+      <div class="container">
+        <div class="input-header">
+          <div class="dataTableLenght">
+            <label>
+              Show
+              <select id="length" onchange="setLength()">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+              entries
+            </label>
+          </div>
+          <div class="description">
+           <span id="text-des"></span>
+          </div>
+          <div class="filterSearch" id="filter">
+            <label>
+              Search:
+              <input onkeyup="mySearch()" type="search" name="search" id="myInput" />
+            </label>
+          </div>
+        </div>
+        <div class="table-container">
+          <table id="myTable">
+            <thead>
+              <tr>
+                <th id="name-sort">Name <i class="fas fa-sort-up"></i></th>
+                <th id="position-sort">Position <i class="fas fa-sort-up"></i></th>
+                <th id="office-sort">Office <i class="fas fa-sort-up"></i></th>
+                <th id="age-sort">Age <i class="fas fa-sort-up"></i></th>
+                <th id="date-sort">Start date <i class="fas fa-sort-up"></i></th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot>
+              <tr>
+                <th rowspan="1" colspan="1">Name</th>
+                <th rowspan="1" colspan="1">Position</th>
+                <th rowspan="1" colspan="1">Office</th>
+                <th class="dt-body-right" rowspan="1" colspan="1">Age</th>
+                <th rowspan="1" colspan="1">Start date</th>
+                <th
+                  class="dt-body-right"
+                  rowspan="1"
+                  colspan="1"
+                  style="display: none"
+                >
+                  Salary
+                </th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <div class='pagination'>
+        </div>
+      </div>
+    </div>
+  </body> 
+  <script src="/custom.js"></script>
+</html>
